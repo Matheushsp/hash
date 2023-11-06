@@ -1,11 +1,22 @@
-Claro, vou explicar o código passo a passo:
 
-1. `hash_table = {}`: Aqui, estamos criando um dicionário vazio chamado `hash_table`, que servirá como nossa tabela hash. Os dicionários em Python são uma estrutura de dados que permite armazenar pares chave-valor, onde as chaves são únicas.
+- A estrutura de dados implementada é uma tabela hash com tratamento de colisões usando listas ligadas.
 
-2. Inserção de valores: Usamos a notação de colchetes `[key]` para inserir pares chave-valor no dicionário `hash_table`. Por exemplo, `hash_table["Python"] = "Linguagem de programação de alto nível"` insere a chave "Python" com o valor "Linguagem de programação de alto nível" no dicionário. Fazemos o mesmo para as outras linguagens.
+- O código inclui funções para inserção, busca e remoção de pares chave-valor na tabela hash.
 
-3. Busca: Para buscar um valor, verificamos se a chave desejada está presente no dicionário usando a expressão `key in hash_table`. Se a chave estiver presente, imprimimos o valor associado a essa chave. Caso contrário, informamos que a chave não foi encontrada.
+- A função de hash (`hash_function`) é usada para calcular o índice com base na chave e no tamanho da tabela de hash.
 
-4. Remoção: Para remover um valor, usamos a instrução `del` para excluir a chave do dicionário. Antes de usar `del`, verificamos se a chave está presente no dicionário usando `key in hash_table`. Se a chave estiver presente, ela será removida. Caso contrário, não ocorrerá nenhum erro.
+- O tamanho da tabela de hash é definido como 10 (mas pode ser ajustado) e as colisões são tratadas por meio de listas ligadas.
 
-No código, as operações de inserção, busca e remoção são realizadas diretamente no dicionário Python, sem a necessidade de definir classes e métodos personalizados, tornando o código mais simples e direto. É importante notar que essa abordagem é adequada para casos simples e pequenos conjuntos de dados. Para aplicações mais complexas, uma implementação personalizada pode ser mais apropriada.
+- A função `insert` permite adicionar um novo par chave-valor à tabela de hash.
+
+- A função `search` permite procurar um valor na tabela de hash com base na chave.
+
+- A função `remove` permite remover um par chave-valor da tabela de hash com base na chave.
+
+- Você pode usar essas funções para gerenciar pares chave-valor na tabela de hash.
+
+- Para adicionar, buscar ou remover um valor, você deve usar as funções `insert`, `search` e `remove` conforme necessário.
+
+- O tamanho da tabela de hash é configurado como 10, mas você pode ajustá-lo, alterando o valor de `table_size`.
+
+Essa estrutura de dados de tabela hash é flexível e pode ser usada para armazenar pares chave-valor associados a chaves únicas. Ela inclui funções para gerenciar esses pares na tabela.
