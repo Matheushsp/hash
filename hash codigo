@@ -1,26 +1,51 @@
-# Cria um dicionário vazio para representar a tabela hash
-hash_table = {}
+# Função de hash simples que calcula o índice com base na chave e no tamanho da tabela
+def hash_function(key, size):
+    return hash(key) % size
+
+# Tamanho da tabela de hash
+table_size = 10
+
+# Cria uma lista de listas (tabela de hash) com  listas vazias
+hash_table = [[] for _ in range(table_size)]
+
+# Inserção de valores na tabela hash
+def insert(key, value):
+    index = hash_function(key, table_size)
+    hash_table[index].append((key, value))
+
+# Busca por uma chave na tabela hash
+def search(key):
+    index = hash_function(key, table_size)
+    for k, v in hash_table[index]:
+        if k == key:
+            return v
+    return None
+
+# Remoção de um par chave-valor da tabela hash
+def remove(key):
+    index = hash_function(key, table_size)
+    for item in hash_table[index]:
+        if item[0] == key:
+            hash_table[index].remove(item)
 
 # Inserção de valores
-hash_table["Python"] = "Linguagem de programação de alto nível"
-hash_table["Java"] = "Linguagem de programação orientada a objetos"
-hash_table["C++"] = "Linguagem de programação de sistema"
+insert("Python", "programação de alto nível")
+insert("Java", "programação orientada a objetos")
+insert("C++", "programação de sistema")
 
 # Busca
-key = "Python"
-if key in hash_table:
-    print(f"{key}: {hash_table[key]}")
+result = search("Java")
+if result:
+    print("Valor encontrado:", result)
 else:
-    print(f"{key} não encontrado")
+    print("Valor não encontrado")
 
 # Remoção
-key = "Java"
-if key in hash_table:
-    del hash_table[key]
+remove("Java")
 
 # Verificar se a remoção foi bem-sucedida
-key = "Java"
-if key in hash_table:
-    print(f"{key}: {hash_table[key]}")
+result = search("Java")
+if result:
+    print("Valor encontrado:", result)
 else:
-    print(f"{key} não encontrado")
+    print("Valor não encontrado")
