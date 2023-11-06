@@ -5,7 +5,7 @@ def hash_function(key, size):
 # Tamanho da tabela de hash
 table_size = 10
 
-# Cria uma lista de listas (tabela de hash) com  listas vazias
+# Cria uma lista de listas (tabela de hash) com 'table_size' listas vazias
 hash_table = [[] for _ in range(table_size)]
 
 # Inserção de valores na tabela hash
@@ -29,22 +29,15 @@ def remove(key):
             hash_table[index].remove(item)
 
 # Inserção de valores
-insert("Python", "programação de alto nível")
-insert("Java", "programação orientada a objetos")
-insert("C++", "programação de sistema")
+insert("Python", "Linguagem de programação de alto nível")
+insert("Java", "Linguagem de programação orientada a objetos")
+insert("C++", "Linguagem de programação de sistema")
+
+# Inserção de um novo par chave-valor
+insert("JavaScript", "Linguagem de programação para desenvolvimento web")
 
 # Busca
-result = search("Java")
-if result:
-    print("Valor encontrado:", result)
-else:
-    print("Valor não encontrado")
-
-# Remoção
-remove("Java")
-
-# Verificar se a remoção foi bem-sucedida
-result = search("Java")
+result = search("Python")
 if result:
     print("Valor encontrado:", result)
 else:
