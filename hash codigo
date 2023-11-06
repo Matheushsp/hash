@@ -1,0 +1,26 @@
+# Cria um dicionário vazio para representar a tabela hash
+hash_table = {}
+
+# Inserção de valores
+hash_table["Python"] = "Linguagem de programação de alto nível"
+hash_table["Java"] = "Linguagem de programação orientada a objetos"
+hash_table["C++"] = "Linguagem de programação de sistema"
+
+# Busca
+key = "Python"
+if key in hash_table:
+    print(f"{key}: {hash_table[key]}")
+else:
+    print(f"{key} não encontrado")
+
+# Remoção
+key = "Java"
+if key in hash_table:
+    del hash_table[key]
+
+# Verificar se a remoção foi bem-sucedida
+key = "Java"
+if key in hash_table:
+    print(f"{key}: {hash_table[key]}")
+else:
+    print(f"{key} não encontrado")
