@@ -1,0 +1,11 @@
+Claro, vou explicar o código passo a passo:
+
+1. `hash_table = {}`: Aqui, estamos criando um dicionário vazio chamado `hash_table`, que servirá como nossa tabela hash. Os dicionários em Python são uma estrutura de dados que permite armazenar pares chave-valor, onde as chaves são únicas.
+
+2. Inserção de valores: Usamos a notação de colchetes `[key]` para inserir pares chave-valor no dicionário `hash_table`. Por exemplo, `hash_table["Python"] = "Linguagem de programação de alto nível"` insere a chave "Python" com o valor "Linguagem de programação de alto nível" no dicionário. Fazemos o mesmo para as outras linguagens.
+
+3. Busca: Para buscar um valor, verificamos se a chave desejada está presente no dicionário usando a expressão `key in hash_table`. Se a chave estiver presente, imprimimos o valor associado a essa chave. Caso contrário, informamos que a chave não foi encontrada.
+
+4. Remoção: Para remover um valor, usamos a instrução `del` para excluir a chave do dicionário. Antes de usar `del`, verificamos se a chave está presente no dicionário usando `key in hash_table`. Se a chave estiver presente, ela será removida. Caso contrário, não ocorrerá nenhum erro.
+
+No código, as operações de inserção, busca e remoção são realizadas diretamente no dicionário Python, sem a necessidade de definir classes e métodos personalizados, tornando o código mais simples e direto. É importante notar que essa abordagem é adequada para casos simples e pequenos conjuntos de dados. Para aplicações mais complexas, uma implementação personalizada pode ser mais apropriada.
